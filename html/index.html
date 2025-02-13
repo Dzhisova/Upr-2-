@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .main-content, .registration-form {
+            margin: 20px 0;
+        }
+        .registration-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .registration-form input, .registration-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+        }
+        .registration-form input[type="submit"] {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Събитие: Концерт на открито</h1>
+        <nav>
+            <ul>
+                <li><a href="#program">Програма</a></li>
+                <li><a href="#venue">Място</a></li>
+                <li><a href="#registration">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="program" class="main-content">
+            <h2>Програма</h2>
+            <ul>
+                <li>18:00 - Вход и регистрация</li>
+                <li>19:00 - Откриване и приветствие</li>
+                <li>19:30 - Основен концерт</li>
+                <li>21:00 - Закриване</li>
+            </ul>
+        </section>
+
+        <section id="venue" class="main-content">
+            <h2>Място</h2>
+            <p>Градски парк, София</p>
+        </section>
+
+        <section id="registration" class="registration-form">
+            <h2>Регистрационна форма</h2>
+            <form action="submit_registration.php" method="post">
+                <label for="name">Име:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Имейл:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Съобщение:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input type="submit" value="Регистрирай се">
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Концерт на открито</p>
+    </footer>
+</body>
+</html>
